@@ -1,6 +1,8 @@
 # Angular-13-NgRx
 Curso do NgRx moderno, incluindo NgRx Data Store, Effects, Selectors e DevTools.
 
+# Install
+
 1 - node js(atualizar)
 
 2 - npm install -g @angular/cli
@@ -20,6 +22,5 @@ A CLI Angular inclui um servidor para você criar e servir seu aplicativo localm
 1 - Navegue até a pasta do espaço de trabalho, como my-app.
 
 2 - Execute o seguinte comando:
-
 cd my-app
 ng serve --open
