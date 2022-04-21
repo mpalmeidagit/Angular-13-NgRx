@@ -1,38 +1,37 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { environment } from 'src/environments/environment';
 import { UsuarioModel } from '../Models/UsuarioModel';
 
 @Injectable({ providedIn: 'root' })
-export class UsuarioService {
-    private url = `${environment.endpoint}`;
+export class UsuarioService { 
+
     constructor(private http: HttpClient) {
     }
 
 
-    getUsuarios(){
-        return this.http.get<UsuarioModel[]>(`${this.url}`);
+    getUsuarios() {
+        return this.http.get<UsuarioModel[]>("http://localhost:3000/Usuarios");
     }
 
-    getUsuario(id: number){
-        return this.http.get<UsuarioModel[]>(`${this.url}/${id}`);   
+    getUsuario(id: number) {
+        return this.http.get<UsuarioModel>('http://localhost:3000/usuarios/' + id);
     }
 
-    addUsuario(record: UsuarioModel){
+    addUsuario(record: UsuarioModel) {
         let headers = new HttpHeaders();
         headers = headers.set('Content-Type', 'application/json; charset=utf-8');
-        return this.http.put<UsuarioModel>(`${this.url}/${record.id, JSON.stringify(record)}`, { headers: headers });
+        return this.http.post<UsuarioModel>('http://localhost:3000/usuarios', JSON.stringify(record), { headers: headers });
     }
 
-    updateUsuario(record: UsuarioModel){
+    updateUsuario(record: UsuarioModel) {
         let headers = new HttpHeaders();
         headers = headers.set('Content-Type', 'application/json; charset=utf-8');
-        return this.http.put<UsuarioModel>(`${this.url}/${record.id, JSON.stringify(record)}`, { headers: headers });
+        return this.http.put<UsuarioModel>('http://localhost:3000/usuarios/' + record.id, JSON.stringify(record), { headers: headers });
     }
 
-    deleteUsuario(id: number){
+    deleteUsuario(id: number) {
         let headers = new HttpHeaders();
         headers = headers.set('Content-Type', 'application/json; charset=utf-8');
-        return this.http.put<UsuarioModel>(`${this.url}/${id}`, { headers: headers });
+        return this.http.delete('http://localhost:3000/usuarios/' + id, { headers: headers });
     }
 }
