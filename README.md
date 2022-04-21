@@ -15,8 +15,7 @@ Curso do NgRx moderno, incluindo NgRx Data Store, Effects, Selectors e DevTools.
 
 6 - npm install json-server
 
----------------------------------------------------------
-Execute o aplicativo
+# Execute o aplicativo
 A CLI Angular inclui um servidor para você criar e servir seu aplicativo localmente.
 
 1 - Navegue até a pasta do espaço de trabalho, como my-app.
