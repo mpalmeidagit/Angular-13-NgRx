@@ -26,9 +26,9 @@ ng serve --open
 
 # Instalação - NGRX
 
-npm install @ngrx/store –save
+npm install @ngrx/store --save
 
-npm install @ngrx/effects –save
+npm install @ngrx/effects --save
 
 # Esta extensão é do chrome 
 npm install @ngrx/store-devtools --save
