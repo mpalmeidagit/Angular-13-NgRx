@@ -23,3 +23,11 @@ A CLI Angular inclui um servidor para você criar e servir seu aplicativo localm
 2 - Execute o seguinte comando:
 cd my-app
 ng serve --open
+
+# Instalação - NGRX
+
+npm install @ngrx/store –save
+
+npm install @ngrx/effects –save
+
+npm install @ngrx/store-devtools --save
